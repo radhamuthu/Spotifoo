@@ -7,16 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7233dbf0-deef-44d1-a24d-f0915377e9c0" name="Changes" comment="version done with  4 cases">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Spotifoo2_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Album.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Artist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Album.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Artist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Display.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Genre.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReadFile.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/radha/Desktop/Spotifoo",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
