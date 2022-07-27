@@ -7,6 +7,8 @@ public class ReadFile extends Display {
     static ArrayList<String> artistList = new ArrayList<>();
     static ArrayList<String> albumList = new ArrayList<>();
     static ArrayList<String> genreList = new ArrayList<>();
+    static ArrayList<String> songfileList = new ArrayList<>();
+    static ArrayList<String> pngList = new ArrayList<>();
 
     public static void readNames() {
         var file = new File("assets/data.txt");
@@ -16,7 +18,7 @@ public class ReadFile extends Display {
                 setNames(readLine);
             }
         } catch (Exception e) {
-            System.out.println("Invalid input");
+            System.out.println("File doesn't exist");
         }
     }
     public static void setNames(String rLine) {
@@ -25,8 +27,8 @@ public class ReadFile extends Display {
         artistList.add(read[1]);
         albumList.add(read[2]);
         genreList.add(read[3]);
-
-
+        songfileList.add(read[4]);
+        pngList.add(read[5]);
     }
 
 
