@@ -6,5 +6,6 @@ public class Main {
         readFile.readNames();
         displayFile.displaymain();
         System.out.println("thanks for choosing Spotifoo");
+
     }
 }

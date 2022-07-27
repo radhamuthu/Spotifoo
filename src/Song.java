@@ -1,8 +1,6 @@
 import java.awt.*;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -15,12 +13,11 @@ public class Song {
 
          input = true;
         try {
-
-
             Scanner play = new Scanner(System.in);
-
-            int number;
-            number = play.nextInt();
+            int number;String songName;
+            songName = play.nextLine();
+            if (songName.trim().isEmpty()) throw new InputMismatchException();
+            number = Integer.parseInt(songName) ;
 
             if (number <=ReadFile.songList.size() && number > 0)  {
                 number = number - 1;// to acess array
@@ -44,7 +41,7 @@ public class Song {
                             d.open(readpngfile);
                         } else if (defaultpngfile.exists()) {
                             d.open(defaultpngfile);
-                        } input = true;
+                        }
                     }
                 } else {
                     System.out.println("Sorry for inconvenience ,Can't play the song");
@@ -76,7 +73,7 @@ public class Song {
             System.out.println(a + "." + i);
             a++;
         }
-        System.out.println("0. To go back to main menu ");
+        System.out.println("[0]. To go back to main menu ");
         System.out.print("Enter your option  :");
         playSong();
 

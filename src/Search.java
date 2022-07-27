@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Search {
 
     public static void readInput() {
+        validation.cls();
         String searchInput;
         System.out.print("Enter search string :");
         try {
@@ -16,51 +17,20 @@ public class Search {
             if (searchInput.trim().isEmpty()) throw new InputMismatchException();
             searchInput =searchInput.trim().toLowerCase();
             ArrayList<Integer> tempsearchSong = new ArrayList<Integer>();
-            //ArrayList<Integer> tempsearchArtist = new ArrayList<Integer>();
-            //ArrayList<Integer> tempsearchAlbum = new ArrayList<Integer>();
-            //ArrayList<Integer> tempsearchGenre = new ArrayList<Integer>();
+
             for (int i = 0; i < ReadFile.songList.size(); i++) {
                 String toCheck =ReadFile.songList.get(i).toLowerCase();
                 if(toCheck.contains(searchInput)){
                 tempsearchSong.add(i);
                 }
             }
-            /*for (int i = 0; i < ReadFile.songList.size(); i++) {
-                if(ReadFile.artistList.get(i).contains(stringInput)){
-                    tempsearchArtist.add(i);k++;
-                }
-            }
-            for (int i = 0; i < ReadFile.albumList.size(); i++) {
-                if(ReadFile.albumList.get(i).contains(stringInput)){
-                    tempsearchAlbum.add(i);k++;
-                }
-            }for (int i = 0; i < ReadFile.genreList.size(); i++) {
-                if(ReadFile.genreList.get(i).contains(stringInput)){
-                    tempsearchGenre.add(i);k++;
-                }
-            }*/
             if(tempsearchSong.size()>0) {
                 System.out.println("The Searched songs available are");
                 displaySearchedSong(tempsearchSong);
-            }
-            /*if(tempsearchArtist.size()>0) {
-                System.out.println("The Search Artist names are ");
-                Process.assignListHashset(tempsearchArtist);
-                displaySearchedSong(tempsearchSong);
-            }if(tempsearchAlbum.size()>0){
-                System.out.println("The Search Album names are ");
-                Process.assignListHashset(tempsearchAlbum);
-            }if(tempsearchGenre.size()>0){
-                System.out.println("The Search genre names are ");
-                Process.assignListHashset(tempsearchGenre);
-            }
-*/
-
-
-
-
+            } else
+                System.out.println("There is no song based on your search.");
         }catch(InputMismatchException e){
-            System.out.print("Invalid input,Please enter search words :");
+            System.out.print("Invalid input. Please enter search words :");
             }
 
         }
@@ -70,10 +40,10 @@ public class Search {
         int a = 1;// to  start the display with 1
         for (int i = 0; i < temp.size(); i++) {
             int j = (int) temp.get(i);
-            System.out.println(a + "." + ReadFile.songList.get(j));
+            System.out.println("["+a + "]. " + ReadFile.songList.get(j));
             a++;
         }
-        System.out.println("0. To go back to main menu");
+        System.out.println("[0]. To go back to main menu");
         System.out.print("Please choose the option :");
         boolean input2 = true;
         do {
@@ -108,8 +78,7 @@ public class Search {
                                 d.open(defaultpngfile);
 
                         }
-                        input2 = true;
-                    }  else {
+                     }  else {
                         System.out.println("Sorry for inconvenience ,Can't play the song");
                         Display.displaymain();
                     }
@@ -121,7 +90,7 @@ public class Search {
                 } else throw new IllegalArgumentException();
 
             } catch (IllegalArgumentException | InputMismatchException e) {
-                System.out.print("Invalid input,Please enter a correct number :");
+                System.out.print("Invalid input,Please enter a correct number: ");
                 input2 =false;
             } catch (IOException e) {
                 System.out.println("Sorry for inconvenience. ");
