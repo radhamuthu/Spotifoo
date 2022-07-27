@@ -2,16 +2,19 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Spotifoo2:jar" />
+      <artifact name="Spotifoo:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7233dbf0-deef-44d1-a24d-f0915377e9c0" name="Changes" comment="version done with  4 cases">
+    <list default="true" id="7233dbf0-deef-44d1-a24d-f0915377e9c0" name="Changes" comment="add comments">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Spotifoo_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Spotifoo2_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Spotifoo2_jar2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Display.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Display.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Spotifoo2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Spotifoo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Process.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Process.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReadFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReadFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Song.java" afterDir="false" />
     </list>
@@ -63,7 +66,20 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Spotifoo2" />
+      <module name="Spotifoo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Spotifoo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Spotifoo" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -104,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658927105553</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add comments">
+      <created>1658951607280</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658951607280</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -132,7 +155,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="version done with  4 cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="version done with  4 cases" />
+    <MESSAGE value="add comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

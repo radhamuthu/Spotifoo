@@ -99,7 +99,7 @@ public class Process {
                 validation.cls();
                 // check userinput to play the  selected song and also open image file respective to the song
                 if (number > 0 && number <= temp.size()) {
-                    number = number - 1;
+                    number = number - 1;// to access the array
                     number = temp.get(number);
                     String songfile = ReadFile.songfileList.get(number);
                     String pngfile = ReadFile.pngList.get(number);
