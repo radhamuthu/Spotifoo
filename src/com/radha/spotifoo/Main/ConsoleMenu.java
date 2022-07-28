@@ -28,30 +28,35 @@ public  class ConsoleMenu {
                             System.out.println("The Song names are");
                             SongSelection.displaySongNameInConsole();
                             validInput=false;
+                            Helper.clearConsole();
                             break;
                         case 2:
                             Helper.clearConsole();// clear console
                             System.out.println("The Artist names are");
                             ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.artistList);
                             validInput =false;
+                            Helper.clearConsole();
                             break;
                         case 3:
                             Helper.clearConsole();// clear console
                             System.out.println("The Album names are");
                             ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.albumList);
                             validInput =false;
+                            Helper.clearConsole();
                             break;
                         case 4:
                             Helper.clearConsole();// clear console
                             System.out.println("The Genre are");
                             ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.genreList);
                             validInput =false;
+                            Helper.clearConsole();
                             break;
 
                         case 5:
                             Helper.clearConsole();// clear console
                             WordSearch.getSearchWordInput();
                             validInput =false;
+                            Helper.clearConsole();
                             break;
                         case 6:
                             Helper.clearConsole();// clear console
