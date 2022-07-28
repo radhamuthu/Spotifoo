@@ -1,3 +1,5 @@
+package com.radha.spotifoo.Main;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
@@ -5,60 +7,79 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class WordSearch {
-// method is used to clear the console and ask for user input to search song
-    public static void getSearchWordInput() {
-        String searchWordInput;
-        System.out.print("Enter search words :");
+public class Helper {
+    public static void clearConsole(){
         try {
-            Scanner scanInput = new Scanner(System.in);
-            searchWordInput = scanInput.nextLine();
-            if (searchWordInput.trim().isEmpty()) throw new InputMismatchException();
-            searchWordInput =searchWordInput.trim().toLowerCase();
-            ArrayList<Integer> temporarySearchList = new ArrayList<>();
-            // the input word is searched in songArrayList and stored in temporary Search arraylist
-            for (int i = 0; i < AssetsFolderReader.songList.size(); i++) {
-                String toCheck =AssetsFolderReader.songList.get(i).toLowerCase();
-                if(toCheck.contains(searchWordInput)){
-                    temporarySearchList.add(i);
-                }
-            }
-            //to check if there is any song matched with the search word or else it will say no song
-            if(temporarySearchList.size()>0) {
-                System.out.println("The Searched songs available are");
-                displaySearchedSongAndPlay(temporarySearchList);// to display the search matched song names by calling method
 
-            } else {
-                System.out.println("There is no song based on your search.");
-                ConsoleMenu.MenuList();
-            }
-        }catch(InputMismatchException e){
-            System.out.print("Invalid input. Please enter search words :");
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c","cls").inheritIO().start().waitFor();
+                System.out.println("Welcome to Spotifoo - Music Player");
             }
 
+            else{
+                Runtime.getRuntime().exec("clear");
+                System.out.println("Welcome to Spotifoo - Music Player");
+            }
+        } catch (IOException | InterruptedException ex) {
+            System.out.println("Interrupted exception");
         }
-    //to display the search matched song names
-    public static void displaySearchedSongAndPlay(ArrayList<Integer> temporaryList) {
+    }
+    public static Integer scanUserInput(String userInput ){
 
-        int beginNumber= 1;// to  start the display with 1
+        int userInputNumber;
+        if (userInput.trim().isEmpty()) {
+            throw new InputMismatchException();
+        }else{
+            userInputNumber = Integer.parseInt(userInput) ;
+            return userInputNumber;
+        }
+    }
+
+    /**
+     *
+     * @param temporaryList-To display the songs by taking position
+     *    of selected Album/artist/genre name from temporary ArrayList
+     */
+    public static void displayInConsoleSong(ArrayList<Integer> temporaryList){
+        int beginNumber = 1;// to  start the display with 1
+        System.out.println("The Songs available are ");
+
         for (Integer integer : temporaryList) {
             int j = integer;
             System.out.println("[" + beginNumber + "]. " + AssetsFolderReader.songList.get(j));
             beginNumber++;
         }
         System.out.println("[0]. To go back to main menu");
+        System.out.print("Please choose the option : ");
+    }
+
+    /**
+     *
+     * @param userList- to display the album/artist/genre names to console
+     */
+    public static void displayInConsoleNames(ArrayList<String> userList){
+        int beginNumber = 1;// to  start the display with 1 in console
+        for (String i : userList) {
+            System.out.println("["+beginNumber +"]. " + i);
+            beginNumber++;
+        }
+        System.out.println("[0]. To go back to main menu");
         System.out.print("Please choose the option :");
+    }
+
+    /**
+     *
+     * @param temporaryList - holds the position of the selected songs
+     *  which will help to recover the song when user selects the specific song to play
+     */
+    public static void playTheSelectedSong(ArrayList<Integer> temporaryList){
         boolean validInput;
         do {
             validInput = true;
             try {
-
-                Scanner scanNumber = new Scanner(System.in);
-                String songNumberString = String.valueOf(scanNumber.nextInt());
-                // to check space or null or empty input from user and throw exception error
-                if (songNumberString.trim().isEmpty()) throw new IllegalArgumentException();
-                int userSelectedNumber = Integer.parseInt(songNumberString) ;
-                 // check user input to play the  selected song and also open image file respective to the song
+                Scanner scanInput = new Scanner(System.in);
+                int userSelectedNumber =Helper.scanUserInput(scanInput.nextLine());
+                // check user input to play the  selected song and also open image file respective to the song
                 if (userSelectedNumber > 0 && userSelectedNumber <= temporaryList.size()) {
                     userSelectedNumber = userSelectedNumber - 1;// to access array by reducing the number by 1
                     userSelectedNumber = temporaryList.get(userSelectedNumber);
@@ -80,7 +101,7 @@ public class WordSearch {
                                 d.open(defaultImagePathFile);
 
                         }
-                     }  else {
+                    }  else {
                         // error message when .mp3 format not there to play the song and go to main menu
                         System.out.println("Sorry for inconvenience ,Can't play the song");
                         ConsoleMenu.MenuList();
@@ -104,3 +125,4 @@ public class WordSearch {
     }
 
 }
+

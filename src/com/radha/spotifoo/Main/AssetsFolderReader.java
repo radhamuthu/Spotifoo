@@ -1,15 +1,17 @@
+package com.radha.spotifoo.Main;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AssetsFolderReader {
     //all arrayList for song,artist,album,song file and png image are declared here
-    static ArrayList<String> songList = new ArrayList<>();
-    static ArrayList<String> artistList = new ArrayList<>();
-    static ArrayList<String> albumList = new ArrayList<>();
-    static ArrayList<String> genreList = new ArrayList<>();
-    static ArrayList<String> songFileList = new ArrayList<>();
-    static ArrayList<String> imageList = new ArrayList<>();
+    public static ArrayList<String> songList = new ArrayList<>();
+    public static ArrayList<String> artistList = new ArrayList<>();
+    public static ArrayList<String> albumList = new ArrayList<>();
+    public static ArrayList<String> genreList = new ArrayList<>();
+    public static ArrayList<String> songFileList = new ArrayList<>();
+    public static ArrayList<String> imageList = new ArrayList<>();
     // to read data.txt file
     public static void AssetsDataFile() {
         var dataFile = new File("assets/data.txt");

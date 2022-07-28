@@ -1,3 +1,5 @@
+package com.radha.spotifoo.Main;
+
 import java.util.*;
 
 public  class ConsoleMenu {
@@ -18,9 +20,7 @@ public  class ConsoleMenu {
             System.out.print("Please choose the option : ");
             try {
                 Scanner ui = new Scanner(System.in);
-                String numberString = ui.nextLine();
-                if (numberString.trim().isEmpty()) throw new InputMismatchException();
-                int user = Integer.parseInt(numberString) ;
+                int user= Helper.scanUserInput(ui.nextLine());
                 if (user > 0 && user <= 6) {
                     switch (user) {
                         case 1:
@@ -55,6 +55,7 @@ public  class ConsoleMenu {
                             break;
                         case 6:
                             Helper.clearConsole();// clear console
+                            validInput= true;
                             System.out.println("Thanks for choosing Spotifoo! Have a wonderful Day!!");
                             System.exit(1);
                             break;
