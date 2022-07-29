@@ -12,7 +12,8 @@ information of the songs --the song name, artist, album, genre, file name, and a
 ## Technologies 
 Developed in IntellliJ Idea Community version using Java 17.0.2 
 ## Launch
-To run the Jar file in commandprompt(cmd) using java -jar Spotifoo.jar 
+To run the Jar file in commandprompt(cmd) using java -jar Spotifoo.jar
+The folder assets should be located at the same level of the src folder.
 ## Usage
 The application is a command line interface (terminal) application.The user only navigates by typing a number from an option list and then press enter to execute the command. Typing 0 and pressing enter in any part of the application will send you back to the main menu.
 1. PLAY A SONG
