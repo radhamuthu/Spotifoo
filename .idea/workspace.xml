@@ -6,16 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7233dbf0-deef-44d1-a24d-f0915377e9c0" name="Changes" comment="Final Changes">
+    <list default="true" id="7233dbf0-deef-44d1-a24d-f0915377e9c0" name="Changes" comment="Final Changes in file names">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/ArtistOrAlbumOrGenreSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/SpotifooSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/AssetsFolderReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/AssetsFolderReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/ConsoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/ConsoleMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/SongSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/SongSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/Main/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/WordSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/radha/spotifoo/main/WordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/radha/spotifoo/main/WordSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659086990042</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Final Changes in file names">
+      <created>1659111801594</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1659111801595</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -186,6 +186,7 @@
     <MESSAGE value="added Java docs" />
     <MESSAGE value="added console screen clear" />
     <MESSAGE value="Final Changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final Changes" />
+    <MESSAGE value="Final Changes in file names" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Changes in file names" />
   </component>
 </project>
