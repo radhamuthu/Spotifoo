@@ -8,7 +8,11 @@ import java.util.Scanner;
 
 public class SongSelection {
 
-    // this method is used to select the song from the display in console and then user may have option to play or go to main menu
+    /**
+     *  this method is used to select the song from the displayed song names in console and then user may have option to play or go to main menu
+     *
+     */
+
     private static void userInputForSongSelection() {
         // the do- while block is to run repeatedly when the user input is not in the expected way
         boolean validInput;
@@ -18,8 +22,7 @@ public class SongSelection {
             try {
                 Scanner scanUserInput = new Scanner(System.in);
                 int userGivenNumber = Helper.scanUserInput(scanUserInput.nextLine());
-                // check user input to play the  selected song and also open image file respective to the song
-                if (userGivenNumber <= AssetsFolderReader.songList.size() && userGivenNumber > 0) {
+                    if (userGivenNumber <= AssetsFolderReader.songList.size() && userGivenNumber > 0) {
                     userGivenNumber = userGivenNumber - 1;// to access array
                     String songName = AssetsFolderReader.songFileList.get(userGivenNumber);
                     String imageName = AssetsFolderReader.imageList.get(userGivenNumber);

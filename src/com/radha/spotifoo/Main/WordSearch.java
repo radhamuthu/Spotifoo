@@ -9,7 +9,10 @@ import java.util.Scanner;
  * identify the songs which matches and display un console for user selection to play the corresponding song
  */
 public class WordSearch {
-    // method is used to clear the console and ask for user input to search song
+    /**
+     * method is used to clear the console and ask for user input to search song and validate the input string is empty or not
+     */
+
     public static void getSearchWordInput() {
         String searchWordInput;
         System.out.print("Enter search words :");
@@ -43,9 +46,11 @@ public class WordSearch {
 
     /**
      *
-     * @param temporaryList - carries the position of every selected songs from searched word  matched songs
-     */
-    //to display the search matched song names
+     * @param temporaryList - carries the position of every selected songs from searched word
+     * display the names of songs  which matched the search words
+     *   play the song if user selected any song from the displayed song names
+     * */
+
     public static void displaySearchedSongAndPlay(ArrayList<Integer> temporaryList) {
         Helper.displayInConsoleSong(temporaryList);
         Helper.playTheSelectedSong(temporaryList);

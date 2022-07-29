@@ -3,7 +3,9 @@ package com.radha.spotifoo.Main;
 import java.util.*;
 
 public  class ConsoleMenu {
-
+    /**
+     * Menu list is displayed to console and allow to the user  to select what they want to do
+     */
 
     public static void MenuList() {
         Helper.clearConsole();// to clear the console

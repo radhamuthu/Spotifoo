@@ -8,6 +8,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Helper {
+    /**
+     * to clear the console
+     */
     public static void clearConsole(){
         try {
 
@@ -68,7 +71,7 @@ public class Helper {
     }
 
     /**
-     *
+     *  the method check user input to play the  selected song and also open image file respective to the song
      * @param temporaryList - holds the position of the selected songs
      *  which will help to recover the song when user selects the specific song to play
      */
@@ -79,14 +82,14 @@ public class Helper {
             try {
                 Scanner scanInput = new Scanner(System.in);
                 int userSelectedNumber =Helper.scanUserInput(scanInput.nextLine());
-                // check user input to play the  selected song and also open image file respective to the song
+
                 if (userSelectedNumber > 0 && userSelectedNumber <= temporaryList.size()) {
                     userSelectedNumber = userSelectedNumber - 1;// to access array by reducing the number by 1
                     userSelectedNumber = temporaryList.get(userSelectedNumber);
                     String songName = AssetsFolderReader.songFileList.get(userSelectedNumber);
                     String imageName= AssetsFolderReader.imageList.get(userSelectedNumber);
                     Desktop d = Desktop.getDesktop();
-                    if (songName.contains(".mp3"))// to check if song name exist but does not have mp3 format to open in music player
+                    if (songName.contains(".mp3"))
                     {
                         //read the path name and store the perfect filepath
                         File songPathFile = new File("assets/songs/" + songName);
