@@ -1,4 +1,4 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.awt.*;
 import java.io.File;
@@ -17,12 +17,11 @@ public class SongSelection {
         // the do- while block is to run repeatedly when the user input is not in the expected way
         boolean validInput;
         do {
-
             validInput = true;
             try {
                 Scanner scanUserInput = new Scanner(System.in);
                 int userGivenNumber = Helper.scanUserInput(scanUserInput.nextLine());
-                    if (userGivenNumber <= AssetsFolderReader.songList.size() && userGivenNumber > 0) {
+                if (userGivenNumber <= AssetsFolderReader.songList.size() && userGivenNumber > 0) {
                     userGivenNumber = userGivenNumber - 1;// to access array
                     String songName = AssetsFolderReader.songFileList.get(userGivenNumber);
                     String imageName = AssetsFolderReader.imageList.get(userGivenNumber);
@@ -67,7 +66,8 @@ public class SongSelection {
                 System.out.print("Invalid input,Please enter a correct number :");
                 validInput = false;
             }
-        } while (!validInput);// loop until user gives valid input= true
+        } while (!validInput);       // loop until user gives valid input= true
+
     }
 
     public static void displaySongNameInConsole() {

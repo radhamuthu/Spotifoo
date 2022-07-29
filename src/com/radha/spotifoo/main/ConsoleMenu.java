@@ -1,4 +1,4 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.util.*;
 
@@ -20,9 +20,10 @@ public  class ConsoleMenu {
             System.out.println("[5]. Search");
             System.out.println("[6]. Exit");
             System.out.print("Please choose the option : ");
+
             try {
                 Scanner ui = new Scanner(System.in);
-                int user= Helper.scanUserInput(ui.nextLine());
+               int user= Helper.scanUserInput(ui.nextLine());
                 if (user > 0 && user <= 6) {
                     switch (user) {
                         case 1:
@@ -35,21 +36,21 @@ public  class ConsoleMenu {
                         case 2:
                             Helper.clearConsole();// clear console
                             System.out.println("The Artist names are");
-                            ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.artistList);
+                            SpotifooSelector.assignListHashset(AssetsFolderReader.artistList);
                             validInput =false;
                             Helper.clearConsole();
                             break;
                         case 3:
                             Helper.clearConsole();// clear console
                             System.out.println("The Album names are");
-                            ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.albumList);
+                            SpotifooSelector.assignListHashset(AssetsFolderReader.albumList);
                             validInput =false;
                             Helper.clearConsole();
                             break;
                         case 4:
                             Helper.clearConsole();// clear console
                             System.out.println("The Genre are");
-                            ArtistOrAlbumOrGenreSelection.assignListHashset(AssetsFolderReader.genreList);
+                            SpotifooSelector.assignListHashset(AssetsFolderReader.genreList);
                             validInput =false;
                             Helper.clearConsole();
                             break;
@@ -63,6 +64,7 @@ public  class ConsoleMenu {
                         case 6:
                             Helper.clearConsole();// clear console
                             validInput= true;
+                            ui.close(); // closes the scanner
                             System.out.println("Thanks for choosing Spotifoo! Have a wonderful Day!!");
                             System.exit(1);
                             break;

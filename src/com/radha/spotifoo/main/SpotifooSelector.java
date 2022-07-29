@@ -1,17 +1,17 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.util.*;
 import java.lang.*;
 
 /**
- *Class ArtistOrAlbumOrGenreSelection have same functions for album ,artist and genre  only difference in the inputlist
+ *Class SpotifooSelector have same functions for album ,artist and genre  only difference in the input list
  * assignListHashset method is used for creating the list for Artist /Album/Genre without duplication
  * displayUserGivenHashList method to display the created list and allow to select one from user
  * displaySelectedSong method to display corresponding song from the user selected option and allow to select songs and play it
  *
  * */
 
-public class ArtistOrAlbumOrGenreSelection {
+public class SpotifooSelector {
 
     /**
      * This method is used to create new list without duplicates
@@ -38,14 +38,13 @@ public class ArtistOrAlbumOrGenreSelection {
         boolean validInput = true;
         // the do- while block is to run repeatedly when the user input is not in the expected way
         do {
-            try {
+            try  {
                 Scanner userInput = new Scanner(System.in);
                 int userInputNumber = Helper.scanUserInput(userInput.nextLine());
                 Helper.clearConsole();
                 if (userInputNumber == 0) {
                     ConsoleMenu.MenuList();
-                }
-                else if (userInputNumber <= userGivenHashList.size()) {
+                } else if (userInputNumber <= userGivenHashList.size()) {
                     // temporary ArrayList created to store the position of the specific selected name in the given arrayList
                     // which matches with console displayed given Hash list
                     ArrayList<Integer> temporaryList = new ArrayList<>();

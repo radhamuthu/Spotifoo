@@ -1,4 +1,4 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.awt.*;
 import java.io.File;

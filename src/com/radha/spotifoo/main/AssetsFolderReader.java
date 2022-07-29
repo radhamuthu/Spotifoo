@@ -1,4 +1,4 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,18 +22,20 @@ public class AssetsFolderReader {
      * to read data.txt file from Assets folder
      *
      */
-    public static void AssetsDataFile() {
+    public static void assetsDataFile() {
         var dataFile = new File("assets/data.txt");
-        try (Scanner sc = new Scanner(dataFile)) {
+        try (Scanner scanner = new Scanner(dataFile)) {
             // read line by line until it has no next line
-            while (sc.hasNextLine()) {
-                String readLine = sc.nextLine();
-                StoreNamesInArray(readLine);
+            while (scanner.hasNextLine()) {
+                String readLine = scanner.nextLine();
+                storeNamesInArray(readLine);
             }
         } catch (Exception e) {
             // file does not exist in the specific path
             System.out.println("Data File doesn't exist");
         }
+        // to close the scanner
+
     }
 
     /**
@@ -42,7 +44,7 @@ public class AssetsFolderReader {
      *             we store each specific word in the specific array list using comma separation
      *
      */
-    public static void StoreNamesInArray(String rLine) {
+    public static void storeNamesInArray(String rLine) {
         //  the read line  is separated with "," and add to specific arraylist
         String[] read = rLine.split(",");
         songList.add(read[0]);

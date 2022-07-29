@@ -1,4 +1,4 @@
-package com.radha.spotifoo.Main;
+package com.radha.spotifoo.main;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -16,8 +16,7 @@ public class WordSearch {
     public static void getSearchWordInput() {
         String searchWordInput;
         System.out.print("Enter search words :");
-        try {
-            Scanner scanInput = new Scanner(System.in);
+        try (Scanner scanInput = new Scanner(System.in)){
             searchWordInput = scanInput.nextLine();
             if (searchWordInput.trim().isEmpty()) throw new InputMismatchException();
             searchWordInput = searchWordInput.trim().toLowerCase();
